@@ -4,6 +4,7 @@ import './App.css';
 import UseContextSection from './components/UseContextSection';
 import UseEffectSection from './components/UseEffectSection';
 import UseStateSection from './components/UseStateSection';
+import UseReducerSection from './components/UseReducerSection';
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
         <UseEffectSection/>
           <hr />
         <UseContextSection/>
+          <hr />
+        <UseReducerSection/>
       </div>
     </div>
   );
