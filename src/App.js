@@ -5,19 +5,36 @@ import UseContextSection from './components/UseContextSection';
 import UseEffectSection from './components/UseEffectSection';
 import UseStateSection from './components/UseStateSection';
 import UseReducerSection from './components/UseReducerSection';
+import UseCallbackSection from './components/UseCallbackSection';
 
 function App() {
+
+  const handleShow = (show, idName, setShow) => {
+    const element = document.getElementById(idName)
+    console.log(`On handleShow : ${idName}`)
+    if(show) {
+      element.classList.remove('show')
+      element.classList.add('hide')
+      setShow(false)
+    } else {
+      element.classList.add('show')
+      element.classList.remove('hide')
+      setShow(true)
+    }
+  }
 
   return (
     <div className="App">
       <div className="container my-5 mx-auto">
-        <UseStateSection/>
+        <UseStateSection handleShow={handleShow}/>
           <hr />
-        <UseEffectSection/>
+        <UseEffectSection handleShow={handleShow}/>
           <hr />
-        <UseContextSection/>
+        <UseContextSection handleShow={handleShow}/>
           <hr />
-        <UseReducerSection/>
+        <UseReducerSection handleShow={handleShow}/>
+          <hr />
+        <UseCallbackSection handleShow={handleShow} />
       </div>
     </div>
   );

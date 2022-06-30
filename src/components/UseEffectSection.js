@@ -4,25 +4,14 @@ import FunctionCount from './effectExemple/FunctionCount';
 import FunctionCountWithCondition from './effectExemple/FunctionCountWithCondition';
 import Container from './effectExemple/Container';
 
-const UseEffectSection = () => {
+const UseEffectSection = ({handleShow}) => {
+  
     const [show, setShow] = useState(false)
 
-    const handleClick = () => {
-      const useStateHook = document.getElementById('useEffectHook')
-      if(show) {
-        useStateHook.classList.remove('show')
-        useStateHook.classList.add('hide')
-        setShow(false)
-      } else {
-        useStateHook.classList.add('show')
-        useStateHook.classList.remove('hide')
-        setShow(true)
-      }
-    }
   return (
     <div>
-        <button className="btn btn-warning m-3"onClick={handleClick}>Show/Hide UseEffect</button>
-        
+
+        <button className="btn btn-warning m-3" onClick={() => handleShow(show, 'useEffectHook', setShow)}>Show/Hide useEffectHook</button>
         <div id="useEffectHook" className="row hide">
           <div className="row">
             <ClassCount/>

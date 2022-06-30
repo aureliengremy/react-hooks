@@ -1,27 +1,14 @@
 import React, { useState } from 'react'
-import Count from './Count'
-import MultiCount from './MultiCount';
+import Count from './reducerExemple/Count'
+import MultiCount from './reducerExemple/MultiCount';
 
-const UseReducerSection = () => {
+const UseReducerSection = ({handleShow}) => {
 
     const [show, setShow] = useState(false)
 
-    const handleClick = () => {
-      const useReducerHook = document.getElementById('useReducerHook')
-      if(show) {
-        useReducerHook.classList.remove('show')
-        useReducerHook.classList.add('hide')
-        setShow(false)
-      } else {
-        useReducerHook.classList.add('show')
-        useReducerHook.classList.remove('hide')
-        setShow(true)
-      }
-    }
-
   return (
     <div>
-        <button className="btn btn-warning m-3"onClick={handleClick}>Show/Hide UseReducer</button>
+        <button className="btn btn-warning m-3" onClick={() => handleShow(show, 'useReducerHook', setShow)}>Show/Hide useReducerHook</button>
         <div id="useReducerHook" className="row hide">
             <Count/>
             <hr />
