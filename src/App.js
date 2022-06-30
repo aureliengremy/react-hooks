@@ -6,6 +6,7 @@ import UseEffectSection from './components/UseEffectSection';
 import UseStateSection from './components/UseStateSection';
 import UseReducerSection from './components/UseReducerSection';
 import UseCallbackSection from './components/UseCallbackSection';
+import UseMemoSection from './components/UseMemoSection';
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
         <UseReducerSection handleShow={handleShow}/>
           <hr />
         <UseCallbackSection handleShow={handleShow} />
+          <hr />
+        <UseMemoSection handleShow={handleShow}/>
       </div>
     </div>
   );
