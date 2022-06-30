@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Count from './Count'
+import MultiCount from './MultiCount';
 
 const UseReducerSection = () => {
 
@@ -24,7 +25,8 @@ const UseReducerSection = () => {
         <div id="useReducerHook" className="row hide">
             <Count/>
             <hr />
-            
+            <p>with Object</p>
+            <MultiCount/>
         </div>
     </div>
   )
