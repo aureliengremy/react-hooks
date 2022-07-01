@@ -14,7 +14,7 @@ const FunctionCountWithCondition = () => {
         }, 3000)
         // Avec des conditions :
         // console.log('Mise à jour du titre')
-    }, [])
+    }, [count])
 
   return (
     <div>

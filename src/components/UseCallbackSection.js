@@ -20,7 +20,7 @@ const UseCallbackSection = ({handleShow}) => {
         // console.log('back to zero')
         setCountOne({...countOne, value: 0})
         setCountTwo({...countTwo, value: 0})
-    },[])
+    },[countOne, countTwo])
 
     const [show, setShow] = useState(false)
 

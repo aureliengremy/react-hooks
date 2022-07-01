@@ -10,6 +10,8 @@ const UseContextSection = ({handleShow}) => {
       age: 8
     }
   })
+  // to remove the warning message
+  // setState()
 
     const [show, setShow] = useState(false)
 
