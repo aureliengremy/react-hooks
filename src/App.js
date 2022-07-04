@@ -8,6 +8,8 @@ import UseReducerSection from './components/UseReducerSection';
 import UseCallbackSection from './components/UseCallbackSection';
 import UseMemoSection from './components/UseMemoSection';
 import UseRefSection from './components/UseRefSection';
+import UseImperativeHandleSection from './components/UseImperativeHandleSection';
+import UseLayoutEffect from './components/UseLayoutEffect';
 
 function App() {
 
@@ -41,6 +43,10 @@ function App() {
         <UseMemoSection handleShow={handleShow}/>
           <hr />
         <UseRefSection handleShow={handleShow}/>
+          <hr />
+        <UseImperativeHandleSection handleShow={handleShow}/>
+          <hr />
+        <UseLayoutEffect handleShow={handleShow}/>
       </div>
     </div>
   );
